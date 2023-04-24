@@ -40,8 +40,18 @@ struct DailyForcastView: View {
                             .foregroundColor(.white)
                             .opacity(0.6)
 
-                        RangeProgressView()
-                            .frame(maxWidth: 100)
+                        ProgressView(value: 0.5)
+                            .progressViewStyle(
+                                RangeProgressView(
+                                    range: 0.2...0.8,
+                                    foregroundColors: [
+                                        Color(red: 0.39, green: 0.8, blue: 0.74),
+                                        Color(red: 0.96, green: 0.8, blue: 0.0),
+                                    ],
+                                    backgroundColor: Color(red: 0.05, green: 0.05, blue: 0.05, opacity: 0.1)
+                                )
+                            )
+                            .frame(maxWidth: 100, maxHeight: 4)
 
                         Text("23°")
                             .foregroundColor(.white)
