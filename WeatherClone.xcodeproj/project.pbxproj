@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63F4DA0929FC06BC00834482 /* TemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4DA0829FC06BC00834482 /* TemperatureTests.swift */; };
+		63F4DA0B29FC07FF00834482 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4DA0A29FC07FF00834482 /* Temperature.swift */; };
+		63F4DA0D29FC0C6200834482 /* WeatherSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4DA0C29FC0C6200834482 /* WeatherSnapshot.swift */; };
+		63F4DA0F29FC0CD600834482 /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4DA0E29FC0CD600834482 /* WeatherCondition.swift */; };
 		63FB7E0C29F00F1B006B761E /* WeatherCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FB7E0B29F00F1B006B761E /* WeatherCloneApp.swift */; };
 		63FB7E0E29F00F1B006B761E /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FB7E0D29F00F1B006B761E /* WeatherView.swift */; };
 		63FB7E1029F00F1D006B761E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FB7E0F29F00F1D006B761E /* Assets.xcassets */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63F4DA0829FC06BC00834482 /* TemperatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureTests.swift; sourceTree = "<group>"; };
+		63F4DA0A29FC07FF00834482 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		63F4DA0C29FC0C6200834482 /* WeatherSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSnapshot.swift; sourceTree = "<group>"; };
+		63F4DA0E29FC0CD600834482 /* WeatherCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCondition.swift; sourceTree = "<group>"; };
 		63FB7E0829F00F1B006B761E /* WeatherClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FB7E0B29F00F1B006B761E /* WeatherCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCloneApp.swift; sourceTree = "<group>"; };
 		63FB7E0D29F00F1B006B761E /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
@@ -108,6 +116,9 @@
 				63FB7E3729F01899006B761E /* HourlyForcastView.swift */,
 				63FB7E3929F024A7006B761E /* DailyForcastView.swift */,
 				63FB7E3B29F029C0006B761E /* RangeProgressView.swift */,
+				63F4DA0A29FC07FF00834482 /* Temperature.swift */,
+				63F4DA0E29FC0CD600834482 /* WeatherCondition.swift */,
+				63F4DA0C29FC0C6200834482 /* WeatherSnapshot.swift */,
 				63FB7E0F29F00F1D006B761E /* Assets.xcassets */,
 				63FB7E1129F00F1D006B761E /* Preview Content */,
 			);
@@ -126,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				63FB7E1C29F00F1D006B761E /* WeatherCloneTests.swift */,
+				63F4DA0829FC06BC00834482 /* TemperatureTests.swift */,
 			);
 			path = WeatherCloneTests;
 			sourceTree = "<group>";
@@ -269,11 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63F4DA0D29FC0C6200834482 /* WeatherSnapshot.swift in Sources */,
 				63FB7E0E29F00F1B006B761E /* WeatherView.swift in Sources */,
 				63FB7E3A29F024A7006B761E /* DailyForcastView.swift in Sources */,
 				63FB7E3629F014F4006B761E /* WeatherSummaryView.swift in Sources */,
+				63F4DA0F29FC0CD600834482 /* WeatherCondition.swift in Sources */,
 				63FB7E3C29F029C0006B761E /* RangeProgressView.swift in Sources */,
 				63FB7E3829F01899006B761E /* HourlyForcastView.swift in Sources */,
+				63F4DA0B29FC07FF00834482 /* Temperature.swift in Sources */,
 				63FB7E0C29F00F1B006B761E /* WeatherCloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63F4DA0929FC06BC00834482 /* TemperatureTests.swift in Sources */,
 				63FB7E1D29F00F1D006B761E /* WeatherCloneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
