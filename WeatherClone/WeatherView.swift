@@ -11,20 +11,25 @@ struct WeatherView: View {
     var body: some View {
         ScrollView{
             VStack {
-                WeatherSummaryView(viewModel: wsvm)
+                WeatherSummaryView(viewModel: .mockData)
                     .padding(.top, 40)
                     .padding(.bottom, 40)
 
                 HourlyForcastView(viewModel: .mock)
 
                 DailyForcastView()
+
+                HStack {
+                    UVIndexView()
+                        .aspectRatio(1, contentMode: .fill)
+                    SunTrackerView()
+                        .aspectRatio(1, contentMode: .fill)
+                }
             }
             .padding(.horizontal)
         }
         .background(.blue)
     }
-
-    var wsvm: WeatherSummaryView.ViewModel { .mockData }
 }
 
 struct WeatherView_Previews: PreviewProvider {

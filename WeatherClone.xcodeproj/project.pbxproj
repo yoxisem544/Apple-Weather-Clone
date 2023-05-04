@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63C7DA032A03A6340058A166 /* UVIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7DA022A03A6340058A166 /* UVIndexView.swift */; };
+		63C7DA052A03ABEA0058A166 /* SunTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7DA042A03ABEA0058A166 /* SunTrackerView.swift */; };
 		63F4DA0929FC06BC00834482 /* TemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4DA0829FC06BC00834482 /* TemperatureTests.swift */; };
 		63F4DA0B29FC07FF00834482 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4DA0A29FC07FF00834482 /* Temperature.swift */; };
 		63F4DA0D29FC0C6200834482 /* WeatherSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4DA0C29FC0C6200834482 /* WeatherSnapshot.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63C7DA022A03A6340058A166 /* UVIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVIndexView.swift; sourceTree = "<group>"; };
+		63C7DA042A03ABEA0058A166 /* SunTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunTrackerView.swift; sourceTree = "<group>"; };
 		63F4DA0829FC06BC00834482 /* TemperatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureTests.swift; sourceTree = "<group>"; };
 		63F4DA0A29FC07FF00834482 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		63F4DA0C29FC0C6200834482 /* WeatherSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSnapshot.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				63F4DA0A29FC07FF00834482 /* Temperature.swift */,
 				63F4DA0E29FC0CD600834482 /* WeatherCondition.swift */,
 				63F4DA0C29FC0C6200834482 /* WeatherSnapshot.swift */,
+				63C7DA022A03A6340058A166 /* UVIndexView.swift */,
+				63C7DA042A03ABEA0058A166 /* SunTrackerView.swift */,
 				63FB7E0F29F00F1D006B761E /* Assets.xcassets */,
 				63FB7E1129F00F1D006B761E /* Preview Content */,
 			);
@@ -281,12 +287,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63C7DA052A03ABEA0058A166 /* SunTrackerView.swift in Sources */,
 				63F4DA0D29FC0C6200834482 /* WeatherSnapshot.swift in Sources */,
 				63FB7E0E29F00F1B006B761E /* WeatherView.swift in Sources */,
 				63FB7E3A29F024A7006B761E /* DailyForcastView.swift in Sources */,
 				63FB7E3629F014F4006B761E /* WeatherSummaryView.swift in Sources */,
 				63F4DA0F29FC0CD600834482 /* WeatherCondition.swift in Sources */,
 				63FB7E3C29F029C0006B761E /* RangeProgressView.swift in Sources */,
+				63C7DA032A03A6340058A166 /* UVIndexView.swift in Sources */,
 				63FB7E3829F01899006B761E /* HourlyForcastView.swift in Sources */,
 				63F4DA0B29FC07FF00834482 /* Temperature.swift in Sources */,
 				63FB7E0C29F00F1B006B761E /* WeatherCloneApp.swift in Sources */,
