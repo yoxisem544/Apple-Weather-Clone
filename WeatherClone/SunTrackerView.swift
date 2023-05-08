@@ -20,19 +20,24 @@ struct SunTrackerView: View {
                     .opacity(0.6)
                     .font(.system(size: 12, weight: .medium))
             }
+            .padding(.top, 12)
+            .padding(.horizontal)
             
             Text("6:46PM")
                 .foregroundColor(.white)
                 .font(.system(size: 36, weight: .medium))
                 .shadow(radius: 1.0)
+                .padding(.horizontal)
+                .padding(.top, 2)
 
             Spacer()
 
-            ProgressView(value: 0)
-                .progressViewStyle(RangeProgressView(range: 0.0...1.0,
-                                                     foregroundColors: [.blue],
-                                                     backgroundColor: .gray))
-                .frame(maxHeight: 5.0)
+            WaveView(
+                dayColor: Color(red: 0.65, green: 0.77, blue: 0.89),
+                nightColor: Color(red: 0.28, green: 0.45, blue: 0.63),
+                sunColor: .white,
+                horizonColor: Color(red: 0.69, green: 0.78, blue: 0.88)
+            )
 
             Spacer()
 
@@ -40,8 +45,9 @@ struct SunTrackerView: View {
                 .foregroundColor(.white)
                 .font(.system(size: 12, weight: .medium))
                 .shadow(radius: 1.0)
+                .padding([.leading, .trailing, .bottom])
+                .padding(.top, 6)
         }
-        .padding()
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16))
     }
 }
