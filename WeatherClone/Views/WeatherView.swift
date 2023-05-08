@@ -19,6 +19,8 @@ struct WeatherView: View {
 
                 DailyForcastView()
 
+                AirQualityView()
+
                 HStack {
                     UVIndexView()
                         .aspectRatio(1, contentMode: .fill)

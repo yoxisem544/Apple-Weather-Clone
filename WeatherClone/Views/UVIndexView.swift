@@ -12,12 +12,10 @@ struct UVIndexView: View {
         VStack(alignment: .leading) {
             HStack {
                 Image(systemName: "sun.max.fill")
-                    .foregroundColor(.white)
-                    .opacity(0.6)
+                    .foregroundColor(.currentTheme.sectionHeaderColor)
 
                 Text("UV Index".uppercased())
-                    .foregroundColor(.white)
-                    .opacity(0.6)
+                    .foregroundColor(.currentTheme.sectionHeaderColor)
                     .font(.system(size: 12, weight: .medium))
             }
 
@@ -34,9 +32,13 @@ struct UVIndexView: View {
             Spacer()
 
             ProgressView(value: 0)
-                .progressViewStyle(RangeProgressView(range: 0.0...1.0,
-                                                     foregroundColors: [.blue],
-                                                     backgroundColor: .gray))
+                .progressViewStyle(
+                    RangeProgressView(
+                        range: 0.0...1.0,
+                        foregroundColor: AnyShapeStyle(uvGradient),
+                        backgroundColor: .gray
+                    )
+                )
                 .frame(maxHeight: 5.0)
 
             Spacer()
@@ -49,6 +51,20 @@ struct UVIndexView: View {
         }
         .padding()
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16))
+    }
+
+    var uvGradient: LinearGradient {
+        LinearGradient(
+            colors: [
+                .green,
+                .yellow,
+                .orange,
+                .red,
+                .purple
+            ],
+            startPoint: .leading,
+            endPoint: .trailing
+        )
     }
 }
 

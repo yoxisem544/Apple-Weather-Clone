@@ -10,6 +10,8 @@
 		63C7DA032A03A6340058A166 /* UVIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7DA022A03A6340058A166 /* UVIndexView.swift */; };
 		63C7DA052A03ABEA0058A166 /* SunTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7DA042A03ABEA0058A166 /* SunTrackerView.swift */; };
 		63E59BC22A0760100008C57D /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E59BC12A0760100008C57D /* WaveView.swift */; };
+		63E59BC42A0903F80008C57D /* AirQualityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E59BC32A0903F80008C57D /* AirQualityView.swift */; };
+		63E59BC62A09057A0008C57D /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E59BC52A09057A0008C57D /* Color+Theme.swift */; };
 		63F4DA0929FC06BC00834482 /* TemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4DA0829FC06BC00834482 /* TemperatureTests.swift */; };
 		63F4DA0B29FC07FF00834482 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4DA0A29FC07FF00834482 /* Temperature.swift */; };
 		63F4DA0D29FC0C6200834482 /* WeatherSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4DA0C29FC0C6200834482 /* WeatherSnapshot.swift */; };
@@ -48,6 +50,8 @@
 		63C7DA022A03A6340058A166 /* UVIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVIndexView.swift; sourceTree = "<group>"; };
 		63C7DA042A03ABEA0058A166 /* SunTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunTrackerView.swift; sourceTree = "<group>"; };
 		63E59BC12A0760100008C57D /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
+		63E59BC32A0903F80008C57D /* AirQualityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityView.swift; sourceTree = "<group>"; };
+		63E59BC52A09057A0008C57D /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
 		63F4DA0829FC06BC00834482 /* TemperatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureTests.swift; sourceTree = "<group>"; };
 		63F4DA0A29FC07FF00834482 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		63F4DA0C29FC0C6200834482 /* WeatherSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSnapshot.swift; sourceTree = "<group>"; };
@@ -93,6 +97,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63E59BC72A0929AA0008C57D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63FB7E0D29F00F1B006B761E /* WeatherView.swift */,
+				63FB7E3529F014F4006B761E /* WeatherSummaryView.swift */,
+				63FB7E3729F01899006B761E /* HourlyForcastView.swift */,
+				63FB7E3929F024A7006B761E /* DailyForcastView.swift */,
+				63FB7E3B29F029C0006B761E /* RangeProgressView.swift */,
+				63C7DA022A03A6340058A166 /* UVIndexView.swift */,
+				63C7DA042A03ABEA0058A166 /* SunTrackerView.swift */,
+				63E59BC12A0760100008C57D /* WaveView.swift */,
+				63E59BC32A0903F80008C57D /* AirQualityView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		63E59BC82A0929CD0008C57D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				63F4DA0A29FC07FF00834482 /* Temperature.swift */,
+				63F4DA0E29FC0CD600834482 /* WeatherCondition.swift */,
+				63F4DA0C29FC0C6200834482 /* WeatherSnapshot.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		63E59BC92A0929E20008C57D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63E59BC52A09057A0008C57D /* Color+Theme.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		63FB7DFF29F00F1B006B761E = {
 			isa = PBXGroup;
 			children = (
@@ -117,17 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				63FB7E0B29F00F1B006B761E /* WeatherCloneApp.swift */,
-				63FB7E0D29F00F1B006B761E /* WeatherView.swift */,
-				63FB7E3529F014F4006B761E /* WeatherSummaryView.swift */,
-				63FB7E3729F01899006B761E /* HourlyForcastView.swift */,
-				63FB7E3929F024A7006B761E /* DailyForcastView.swift */,
-				63FB7E3B29F029C0006B761E /* RangeProgressView.swift */,
-				63F4DA0A29FC07FF00834482 /* Temperature.swift */,
-				63F4DA0E29FC0CD600834482 /* WeatherCondition.swift */,
-				63F4DA0C29FC0C6200834482 /* WeatherSnapshot.swift */,
-				63C7DA022A03A6340058A166 /* UVIndexView.swift */,
-				63C7DA042A03ABEA0058A166 /* SunTrackerView.swift */,
-				63E59BC12A0760100008C57D /* WaveView.swift */,
+				63E59BC72A0929AA0008C57D /* Views */,
+				63E59BC82A0929CD0008C57D /* Models */,
+				63E59BC92A0929E20008C57D /* Extensions */,
 				63FB7E0F29F00F1D006B761E /* Assets.xcassets */,
 				63FB7E1129F00F1D006B761E /* Preview Content */,
 			);
@@ -299,7 +329,9 @@
 				63FB7E3C29F029C0006B761E /* RangeProgressView.swift in Sources */,
 				63E59BC22A0760100008C57D /* WaveView.swift in Sources */,
 				63C7DA032A03A6340058A166 /* UVIndexView.swift in Sources */,
+				63E59BC62A09057A0008C57D /* Color+Theme.swift in Sources */,
 				63FB7E3829F01899006B761E /* HourlyForcastView.swift in Sources */,
+				63E59BC42A0903F80008C57D /* AirQualityView.swift in Sources */,
 				63F4DA0B29FC07FF00834482 /* Temperature.swift in Sources */,
 				63FB7E0C29F00F1B006B761E /* WeatherCloneApp.swift in Sources */,
 			);

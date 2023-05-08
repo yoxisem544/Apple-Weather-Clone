@@ -12,12 +12,10 @@ struct SunTrackerView: View {
         VStack(alignment: .leading) {
             HStack {
                 Image(systemName: "sunset.fill")
-                    .foregroundColor(.white)
-                    .opacity(0.6)
+                    .foregroundColor(.currentTheme.sectionHeaderColor)
 
                 Text("Sunset".uppercased())
-                    .foregroundColor(.white)
-                    .opacity(0.6)
+                    .foregroundColor(.currentTheme.sectionHeaderColor)
                     .font(.system(size: 12, weight: .medium))
             }
             .padding(.top, 12)

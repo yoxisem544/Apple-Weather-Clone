@@ -16,8 +16,7 @@ struct DailyForcastView: View {
                     .font(.system(size: 12))
                     .fontWeight(.medium)
             }
-            .foregroundColor(.white)
-            .opacity(0.6)
+            .foregroundColor(.currentTheme.sectionHeaderColor)
             .frame(maxWidth: .infinity, alignment: .leading)
 
             Divider()
@@ -44,10 +43,17 @@ struct DailyForcastView: View {
                             .progressViewStyle(
                                 RangeProgressView(
                                     range: 0.2...0.8,
-                                    foregroundColors: [
-                                        Color(red: 0.39, green: 0.8, blue: 0.74),
-                                        Color(red: 0.96, green: 0.8, blue: 0.0),
-                                    ],
+                                    foregroundColor:
+                                        AnyShapeStyle(
+                                            LinearGradient(
+                                                colors: [
+                                                    Color(red: 0.39, green: 0.8, blue: 0.74),
+                                                    Color(red: 0.96, green: 0.8, blue: 0.0),
+                                                ],
+                                                startPoint: .leading,
+                                                endPoint: .trailing
+                                            )
+                                        ),
                                     backgroundColor: Color(red: 0.05, green: 0.05, blue: 0.05, opacity: 0.1)
                                 )
                             )

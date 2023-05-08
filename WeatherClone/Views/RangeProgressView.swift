@@ -10,7 +10,7 @@ import SwiftUI
 struct RangeProgressView: ProgressViewStyle {
 
     let range: ClosedRange<Double>
-    let foregroundColors: [Color]
+    let foregroundColor: AnyShapeStyle
     let backgroundColor: Color
 
     func makeBody(configuration: Configuration) -> some View {
@@ -20,7 +20,7 @@ struct RangeProgressView: ProgressViewStyle {
                     .fill(backgroundColor)
 
                 Capsule()
-                    .fill(LinearGradient(colors: foregroundColors, startPoint: .leading, endPoint: .trailing))
+                    .fill(foregroundColor)
                     .frame(width: proxy.size.width * fillWidthScale)
                     .offset(x: proxy.size.width * range.lowerBound)
 
@@ -39,18 +39,18 @@ struct RangeProgressView: ProgressViewStyle {
                         y: proxy.size.height / 2
                     )
             }
-            .clipped()
         }
     }
 
     var fillWidthScale: Double {
         let normalizedRange = range.upperBound - range.lowerBound
         return normalizedRange
-
     }
 }
 
 struct RangeProgressView_Previews: PreviewProvider {
+    static let g = AnyShapeStyle(LinearGradient(colors: [.blue, .purple], startPoint: .leading, endPoint: .trailing))
+
     static var previews: some View {
         ScrollView {
             VStack {
@@ -59,7 +59,7 @@ struct RangeProgressView_Previews: PreviewProvider {
                         .frame(height: 10)
                         .progressViewStyle(RangeProgressView(
                             range: 0.0...(Double(n) / 10.0),
-                            foregroundColors: [.blue, .purple],
+                            foregroundColor: g,
                             backgroundColor: .green
                         ))
                         .padding()
@@ -69,7 +69,7 @@ struct RangeProgressView_Previews: PreviewProvider {
                         .frame(height: 10)
                         .progressViewStyle(RangeProgressView(
                             range: (Double(n) / 10.0)...1.0,
-                            foregroundColors: [.blue, .purple],
+                            foregroundColor: g,
                             backgroundColor: .green
                         ))
                         .padding()
@@ -79,7 +79,7 @@ struct RangeProgressView_Previews: PreviewProvider {
                         .frame(height: 10)
                         .progressViewStyle(RangeProgressView(
                             range: (Double(n) / 10.0)...(Double(10-n) / 10.0),
-                            foregroundColors: [.blue, .purple],
+                            foregroundColor: g,
                             backgroundColor: .green
                         ))
                         .padding()
